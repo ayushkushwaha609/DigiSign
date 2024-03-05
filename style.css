@@ -1,0 +1,21 @@
+.container {
+    display: flex;          
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;   
+    min-height: 100vh;     
+}
+
+.drawing-area { 
+    margin-bottom: 20px; /* Add spacing between canvas and controls */
+    border:10px solid black;
+    width: calc(500px + 60px);  
+    height: calc(300px + 60px); 
+    
+}
+
+/* Optional: Style for the text if needed */
+.text {
+    text-align: center;  /* Center the heading  */
+    margin-bottom: 20px; /* Add spacing below the heading  */
+}
