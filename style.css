@@ -1,4 +1,4 @@
-.container {
+/* .container {
     display: flex;          
     flex-direction: column; 
     justify-content: center; 
@@ -7,15 +7,98 @@
 }
 
 .drawing-area { 
-    margin-bottom: 20px; /* Add spacing between canvas and controls */
+    margin-bottom: 20px;
     border:10px solid black;
     width: calc(500px + 60px);  
     height: calc(300px + 60px); 
     
 }
 
+
+.text {
+    text-align: center; 
+    margin-bottom: 20px; 
+} */
+
+
+/* Reset default margin and padding */
+html, body, div, canvas, label, input, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set base font size and family */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    background-color: #35374B; /* Set background color */
+    color: #F6F5F5; /* Set text color */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.drawing-area {
+    margin-bottom: 20px; /* Add spacing between canvas and controls */
+    border: 10px solid #344955; /* Set border color */
+    width: 100%; /* Adjust width to fit the container */
+    max-width: 500px; /* Set maximum width */
+    height: 60vw; /* Set height relative to width */
+    max-height: 300px; /* Set maximum height */
+}
+
 /* Optional: Style for the text if needed */
 .text {
-    text-align: center;  /* Center the heading  */
+    text-align: center; /* Center the heading  */
     margin-bottom: 20px; /* Add spacing below the heading  */
+}
+
+.controls {
+    width: 100%; /* Adjust controls width */
+    max-width: 500px; /* Set maximum width */
+    display: flex;
+    flex-wrap: wrap; /* Allow controls to wrap on smaller screens */
+    justify-content: space-between; /* Distribute controls evenly */
+    align-items: center;
+}
+
+#clear-btn{
+    margin-top: 10px;
+    margin-left: -3px;
+}
+
+
+.controls label,
+.controls button {
+    flex-basis: 48%; /* Adjust width for smaller screens */
+    margin-bottom: 10px; /* Add spacing between controls */
+    background-color: #F6F5F5; /* Set background color */
+    color: #35374B; /* Set text color */
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.controls button {
+    margin-left: 0; /* Remove left margin for buttons */
+}
+
+/* Media query for larger screens */
+@media screen and (min-width: 601px) {
+    .controls label,
+    .controls button {
+        flex-basis: auto; /* Reset width for larger screens */
+        margin-bottom: 0; /* Remove margin bottom for controls */
+    }
+
+    .controls button {
+        margin-left: 5px; /* Add spacing between buttons */
+    }
 }
